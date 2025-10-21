@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0e1f2f;
+  color: #e0f7fa;
+}
+
+header {
+  background-color: #022c43;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #00bcd4;
+}
+
+.burger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #00bcd4;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.nav-links a {
+  color: #e0f7fa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links.show {
+  display: block;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  color: #4dd0e1;
+  border-bottom: 2px solid #00bcd4;
+  padding-bottom: 0.5rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #022c43;
+  color: #80deea;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  gap: 1.5rem; /* This ensures even spacing between items */
+}
+
+.carousel figure {
+  flex: 0 0 auto;
+  text-align: center;
+  color: #b2ebf2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel img {
+  height: 220px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.scroll-btn {
+  background-color: #022c43;
+  color: #00bcd4;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.scroll-btn.left {
+  margin-right: 0.5rem;
+}
+
+.scroll-btn.right {
+  margin-left: 0.5rem;
+}
+
+.carousel figure {
+  flex: 0 0 auto;
+  width: 250px;
+  text-align: center;
+  color: #b2ebf2;
+}
+
+.carousel img {
+  height: 200px; /* Fixed height for consistency */
+  width: auto;   /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+  transition: transform 0.3s ease;
+}
+

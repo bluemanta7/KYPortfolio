@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalib Yang | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <h1>Kalib Yang</h1>
+      <button class="burger">&#9776;</button>
+    </div>
+    <nav class="nav-links">
+      <a href="#laser">Laser Cutting</a>
+      <a href="#prints">3D Prints</a>
+      <a href="#drawings">Digital Drawings</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="laser">
+      <h2>Laser Cutting Projects</h2>
+      <div class="gallery">
+        <!-- Add your laser cutting images here -->
+      </div>
+    </section>
+
+    <section id="prints">
+      <h2>3D Print Projects</h2>
+      <div class="gallery">
+        <!-- Add your 3D print images here -->
+      </div>
+    </section>
+
+<section id="drawings">
+  <h2>Digital Drawings</h2>
+  <div class="carousel-container">
+    <button class="scroll-btn left">&#8592;</button>
+    <div class="carousel">
+      <figure><img src="Images/Art Akatsuki.png" alt="Art Akatsuki" /><figcaption>Art Akatsuki</figcaption></figure>
+      <figure><img src="Images/Art Band.png" alt="Art Band" /><figcaption>Art Band</figcaption></figure>
+      <figure><img src="Images/Art Bubbles.png" alt="Art Bubbles" /><figcaption>Art Bubbles</figcaption></figure>
+      <figure><img src="Images/Art Comfy.png" alt="Art Comfy" /><figcaption>Art Comfy</figcaption></figure>
+      <figure><img src="Images/Art Couch.png" alt="Art Couch" /><figcaption>Art Couch</figcaption></figure>
+      <figure><img src="Images/Art Couch2.png" alt="Art Couch2" /><figcaption>Art Couch2</figcaption></figure>
+      <figure><img src="Images/Art DN.png" alt="Art DN" /><figcaption>Art DN</figcaption></figure>
+      <figure><img src="Images/Art DS.png" alt="Art DS" /><figcaption>Art DS</figcaption></figure>
+      <figure><img src="Images/Art Fall 2.jpg" alt="Art Fall 2" /><figcaption>Art Fall 2</figcaption></figure>
+      <figure><img src="Images/Art Fall 3.png" alt="Art Fall 3" /><figcaption>Art Fall 3</figcaption></figure>
+      <figure><img src="Images/Art Falljpg" alt="Art Falljpg" /><figcaption>Art Falljpg</figcaption></figure>
+      <figure><img src="Images/Art Game Friends.jpg" alt="Art Game Friends" /><figcaption>Art Game Friends</figcaption></figure>
+      <figure><img src="Images/Art Hike1.png" alt="Art Hike1" /><figcaption>Art Hike1</figcaption></figure>
+      <figure><img src="Images/Art Hike2.png" alt="Art Hike2" /><figcaption>Art Hike2</figcaption></figure>
+      <figure><img src="Images/Art Hike3.png" alt="Art Hike3" /><figcaption>Art Hike3</figcaption></figure>
+      <figure><img src="Images/Art Hike4.png" alt="Art Hike4" /><figcaption>Art Hike4</figcaption></figure>
+      <figure><img src="Images/Art Hogwarts 2.jpg" alt="Art Hogwarts 2" /><figcaption>Art Hogwarts 2</figcaption></figure>
+      <figure><img src="Images/Art Hogwarts.png" alt="Art Hogwarts" /><figcaption>Art Hogwarts</figcaption></figure>
+      <figure><img src="Images/Art Mafia.png" alt="Art Mafia" /><figcaption>Art Mafia</figcaption></figure>
+      <figure><img src="Images/Art Peak 1.png" alt="Art Peak 1" /><figcaption>Art Peak 1</figcaption></figure>
+      <figure><img src="Images/Art Peak 2.png" alt="Art Peak 2" /><figcaption>Art Peak 2</figcaption></figure>
+      <figure><img src="Images/Art Roadtrip.png" alt="Art Roadtrip" /><figcaption>Art Roadtrip</figcaption></figure>
+      <figure><img src="Images/Art rooftop.jpg" alt="Art rooftop" /><figcaption>Art rooftop</figcaption></figure>
+      <figure><img src="Images/Art Slep.png" alt="Art Slep" /><figcaption>Art Slep</figcaption></figure>
+      <figure><img src="Images/Art Train.png" alt="Art Train" /><figcaption>Art Train</figcaption></figure>
+    </div>
+    <button class="scroll-btn right">&#8594;</button>
+  </div>
+</section>
+
+
+
+  </main>
+
+  <footer>
+    <p>© 2025 Kalib Yang</p>
+  </footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    if (burger && nav) {
+      burger.addEventListener('click', () => {
+        nav.classList.toggle('show');
+      });
+    }
+
+    const carousel = document.querySelector('.carousel');
+    const leftBtn = document.querySelector('.scroll-btn.left');
+    const rightBtn = document.querySelector('.scroll-btn.right');
+
+    leftBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    rightBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+  });
+</script>
+
+  
+
+</body>
+</html>
