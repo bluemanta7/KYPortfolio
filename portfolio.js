@@ -159,15 +159,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // Helper functions
   function getDescription(title) {
     const descriptions = {
+      "Art Hogwarts": "A digital illustration capturing the magical essence of Hogwarts School of Witchcraft and Wizardry, featuring its iconic architecture set against a mystical backdrop that evokes a sense of wonder and adventure.",
       "Laser Cut Hopper": "This project challenged me to combine bioinspired mechanics with a motorcycle-inspired form, resulting in a spring-powered hopper that jumps vertically using a rotating body. Inspired by a mixture of the leaping jaguar and the mechanism of a click beetle, the design taught me valuable skills in prototyping and laser cutting, while exploring how motion and energy interact in a compact system.",
-      "3D Print PH": "This 3D print project, codenamed 'PH', involved iterative prototyping of a mechanical part designed for modular assembly. The final iteration achieved optimal strength-to-weight ratio through strategic infill patterns and wall thickness adjustments.",
-      "3D Print SM": "The 'SM' project focused on creating a compact structural module with interlocking features. The final print used PETG for durability and flexibility. SM1 and SM2 document early attempts with different wall thicknesses and connector geometries.",
-      "3D Print SH": "The 'SH' series explored shell-based geometries for lightweight enclosures. SH (Final) represents the final iteration, while SH1–SH3 show earlier versions with incomplete edge resolution and uneven layering.",
-      "3D Print GCH": "The 'GCH' series focused on geometric channel housing for fluid or wire routing. GCH1 represents the final optimized print, while GCH2 through GCH7 show earlier iterations with varying channel widths, wall thicknesses, and support strategies. The project emphasized internal flow efficiency and print reliability across multiple slicing profiles.",
+      "3D Print SH": "This was my first project in 3D printing. I didn’t have enough hangers for my room, so I decided to print one myself. I found a design online and asked some of the scouts for help understanding the process. They introduced me to Bamboo Studio and Fusion 360. I started learning Fusion 360 and successfully imported the hanger file. I learned about the roots that hold the print together during printing, and how to remove them afterward. The hanger was adjustable, it could close inward to become portable, so it came in multiple parts. After printing, I removed the roots and added screws to assemble the bodies. Once it was put together, I was able to open and close it successfully. This project taught me the basics of slicing, importing, and assembling multi-part prints.",
+      "3D Print SM": "This was my second project, and it was the first one I designed entirely from scratch. I found inspiration online for a toilet paper holder and decided to create a silhouette of a strong guy holding a barbell. The toilet paper rolls would sit on both ends of the bar, like weights. I modeled the figure and added my initials to the back. After printing, I had a fully functional and visually striking toilet paper holder. It was a creative blend of utility and sculpture, and it felt great to bring my own idea to life without relying on a pre-made file.",
+      "3D Print PH": "The phone holder project was my first time editing an existing design. I found a model online that looked promising, but it was too small and short to be usable. I exported the file and brought it into Fusion 360, where I stretched it out, made it taller, and adjusted the dimensions to better fit my phone. I also customized it a bit to make it more personal. After some trial and error with scaling, I successfully printed the updated version. This was a big step for me, moving from using downloaded models to modifying them for my own needs.",
+      "3D Print GCH": "This project started with a game card holder I found online. It was shaped like a toaster and designed to push out game cards. I really wanted one, so I printed the original model. It was more complex than my earlier projects because it didn’t come in separate parts. After printing it, I decided to create my own version from scratch. I modeled a new design that could hold a large number of game cards and scaled it precisely to fit them. This was one of my most advanced and useful prints, and it showed me how far I’d come in designing functional objects from the ground up.",
       "Art Hike1": "This digital drawing series captures the layered emotions and quiet solitude of hiking through foggy landscapes. Each piece explores different moods and compositions, from misty peaks to winding trails, using soft gradients and subtle textures to evoke depth and introspection.",
       "Art Fall": "This series of digital artworks explores the vibrant colors and dynamic forms of autumn. Each piece captures different aspects of the fall season, from swirling leaves to misty landscapes, using a mix of bold brushstrokes and delicate textures to evoke the feeling of change and transition.",
       "Art Game Friends": "A series exploring the cozy atmosphere of friends gathering to play games together, capturing the warm social connections and relaxed joy of shared gaming experiences.",
-      "Art Bubbles": "An exploration of light, transparency, and playful forms through the simple subject of bubbles, experimenting with different lighting conditions and color palettes."
+      "Art Bubbles": "An exploration of light, transparency, and playful forms through the simple subject of bubbles, experimenting with different lighting conditions and color palettes.",
+      "Art Couch": "A cozy scene depicting a comfortable couch, emphasizing warmth and relaxation through soft textures and inviting colors.",
+      "Art Food1": "A vibrant digital illustration showcasing a variety of delicious foods arranged artfully, highlighting textures and colors to evoke a sense of appetite and culinary delight.",
+      "Art Mafia": "A comic series that delves into the humorous and dramatic escapades of a quirky group involved in the art world, blending satire with vibrant illustrations to bring the characters and their stories to life.",
+      "Art Parodies": "A digital artwork portraying a character embodying strength and resilience, set against a dynamic backdrop that emphasizes movement and power through bold lines and contrasting colors.",
+      "Art Cat": "A charming digital illustration capturing the playful and curious nature of a cat, using soft textures and warm colors to evoke a sense of comfort and companionship.",
+      "Art Bus Wait": "This digital piece depicts the quiet anticipation of waiting for a bus, focusing on urban elements and subtle lighting to convey a mood of solitude amidst the hustle of city life.",
+      "Art Christmas 1": "A festive digital artwork celebrating the holiday season, featuring vibrant colors and joyful themes that capture the warmth and excitement of Christmas festivities."
     };
     return descriptions[title] || "No description available.";
   }
@@ -180,17 +188,44 @@ document.addEventListener("DOMContentLoaded", () => {
         "LaserCutImages/Old.jpg",
         "LaserCutImages/Zoom in.jpg"
       ],
-      "Art Game Friends": [
-        "Images/Draft_GameFriends1.png",
-        "Images/Draft_GameFriends2.png"
+      "Art Parodies": [
+        "Images/Art One Piece.png",
+        "Images/Art Squid Game.png",
+        "Images/Art Cowboy Bebop.png",
+        "images/art adventure time.png",
+        "Images/ARt South Park.png",
+
       ],
+      "Art Christmas 1": [
+        "Images/Art Christmas 2.png",
+        "Images/Art Christmas 3.png"
+      ],
+      "Art Hogwarts": [
+
+        "Images/Art Hogwarts 3.png",
+        "Images/Art Hogwarts 2.jpg",
+
+      ],
+      "Art Mafia": [
+        "Images/Art Mafia Comic1.png",
+        "Images/Art Mafia Comic2.png",
+        "Images/Art Mafia Comic3.png",
+      ],
+      "Art Food1": [
+        "Images/Art Food2.jpg",
+        "Images/Art Food3.jpg",
+        "Images/Art Food4.jpg"
+      ],
+      "Art Game Channel": [
+        "Images/Art Couch2.png",
+        "Images/Art DN.png",
+        "Images/Art DS.png"
+      ],
+
       "Art Fall": [
-        "Images/Art Fall.png",
-        "Images/Art Fall2.png"
+        "Images/Art Fall2.jpg"
       ],
-      "Art Bubbles": [
-        "Images/Draft_Bubbles1.png"
-      ],
+
       "3D Print PH": [
         "3DPrintImages/PH1.jpg",
         "3DPrintImages/PH2.jpg",
