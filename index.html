@@ -21,11 +21,26 @@
 
   <main>
     <section id="laser">
-      <h2>Laser Cutting Projects</h2>
-      <div class="gallery">
-        <!-- Add your laser cutting images here -->
-      </div>
-    </section>
+  <h2>Laser Cutting Projects</h2>
+  <div class="gallery">
+    <figure>
+      <img src="LaserCutImages/Hopper Front.jpeg" alt="Laser Cut Hopper" />
+      <figcaption>Laser Cut: Hopper Final</figcaption>
+    </figure>
+    <figure>
+      <img src="LaserCutImages/Hopper Front.jpeg" alt="Laser Cut Hopper" />
+      <figcaption>Laser Cut: Hopper Final</figcaption>
+    </figure>
+    <figure>
+      <img src="LaserCutImages/Hopper Front.jpeg" alt="Laser Cut Hopper" />
+      <figcaption>Laser Cut: Hopper Final</figcaption>
+    </figure>
+    <figure>
+      <img src="LaserCutImages/Hopper Front.jpeg" alt="Laser Cut Hopper" />
+      <figcaption>Laser Cut: Hopper Final</figcaption>
+    </figure>
+  </div>
+</section>
 
 <section id="prints">
   <h2>3D Print Projects</h2>
@@ -54,7 +69,6 @@
   </div>
 </section>
 
-
 <section id="drawings">
   <h2>Digital Drawings</h2>
   <div class="carousel-container">
@@ -68,14 +82,9 @@
       <figure><img src="Images/Art Couch2.png" alt="Art Couch2" /><figcaption>Art Couch2</figcaption></figure>
       <figure><img src="Images/Art DN.png" alt="Art DN" /><figcaption>Art DN</figcaption></figure>
       <figure><img src="Images/Art DS.png" alt="Art DS" /><figcaption>Art DS</figcaption></figure>
-      <figure><img src="Images/Art Fall 2.jpg" alt="Art Fall 2" /><figcaption>Art Fall 2</figcaption></figure>
-      <figure><img src="Images/Art Fall 3.png" alt="Art Fall 3" /><figcaption>Art Fall 3</figcaption></figure>
-      <figure><img src="Images/Art Falljpg" alt="Art Falljpg" /><figcaption>Art Falljpg</figcaption></figure>
+      <figure><img src="Images/Art Fall.jpg" alt="Art Fall.jpg" /><figcaption>Art Fall</figcaption></figure>
       <figure><img src="Images/Art Game Friends.jpg" alt="Art Game Friends" /><figcaption>Art Game Friends</figcaption></figure>
       <figure><img src="Images/Art Hike1.png" alt="Art Hike1" /><figcaption>Art Hike1</figcaption></figure>
-      <figure><img src="Images/Art Hike2.png" alt="Art Hike2" /><figcaption>Art Hike2</figcaption></figure>
-      <figure><img src="Images/Art Hike3.png" alt="Art Hike3" /><figcaption>Art Hike3</figcaption></figure>
-      <figure><img src="Images/Art Hike4.png" alt="Art Hike4" /><figcaption>Art Hike4</figcaption></figure>
       <figure><img src="Images/Art Hogwarts 2.jpg" alt="Art Hogwarts 2" /><figcaption>Art Hogwarts 2</figcaption></figure>
       <figure><img src="Images/Art Hogwarts.png" alt="Art Hogwarts" /><figcaption>Art Hogwarts</figcaption></figure>
       <figure><img src="Images/Art Mafia.png" alt="Art Mafia" /><figcaption>Art Mafia</figcaption></figure>
@@ -99,107 +108,35 @@
   </footer>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    if (burger && nav) {
-      burger.addEventListener('click', () => {
-        nav.classList.toggle('show');
-      });
-    }
-
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImage");
-    const modalCaption = document.getElementById("modalCaption");
-    const modalDrafts = document.getElementById("modalDrafts");
-    const closeBtn = document.querySelector(".close");
-    const modalTitle = document.getElementById("modalTitle");
-
-
-document.querySelectorAll(".carousel img").forEach(img => {
-  img.addEventListener("click", () => {
-    modal.style.display = "flex";
-    modalImg.src = img.src;
-    modalTitle.textContent = img.alt; // ← This sets the title
-    modalCaption.textContent = getDescription(img.alt);
-    modalDrafts.innerHTML = getDraftImages(img.alt);
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  // Burger menu toggle
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  if (burger && nav) {
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  }
 });
 
-
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
-
-function getDescription(title) {
-  const descriptions = {
-    "Art Akatsuki": "This piece draws inspiration from the Akatsuki aesthetic, blending shadow and intensity with a minimalist palette.",
-    "Art Game Friends": "A cozy night scene capturing the warmth of friendship, board games, and ambient lighting. The cats add a layer of domestic serenity.",
-    "Art Bubbles": "A moment of quiet joy — soap bubbles drifting into a bright sky, symbolizing fleeting thoughts and childhood wonder.",
-    "3D Print PH": "This 3D print project, codenamed 'PH', involved iterative prototyping of a mechanical part designed for modular assembly. The final version shown here was printed using PLA with optimized infill for strength and weight balance. Earlier drafts explored different geometries and tolerances, which are shown below. The process included CAD modeling, slicing with adaptive layer heights, and post-processing with sanding and acetone smoothing."
-  };
-  return descriptions[title] || "No description available.";
-}
-
-
-function getDraftImages(title) {
-  const drafts = {
-    "Art Game Friends": [
-      "Images/Draft_GameFriends1.png",
-      "Images/Draft_GameFriends2.png"
-    ],
-    "Art Bubbles": [
-      "Images/Draft_Bubbles1.png"
-    ],
-    "3D Print PH": [
-      "3DPrintImages/PH1.jpg",
-      "3DPrintImages/PH2.jpg",
-      "3DPrintImages/PH3.jpg",
-      "3DPrintImages/PH4.jpg",
-      "3DPrintImages/PH5.jpg"
-    ],
-    "3D Print SM": [
-      "3DPrintImages/SM1.jpg",
-      "3DPrintImages/SM2.jpg"
-    ],
-    "3D Print SH": [
-      "3DPrintImages/SH1.jpg",
-      "3DPrintImages/SH2.jpg",
-      "3DPrintImages/SH3.jpg"
-    ],
-    "3D Print GCH": [
-      "3DPrintImages/GCH2.jpg",
-      "3DPrintImages/GCH3.jpg",
-      "3DPrintImages/GCH4.jpg",
-      "3DPrintImages/GCH5.jpg",
-      "3DPrintImages/GCH6.jpg",
-      "3DPrintImages/GCH7.jpg"
-    ]
-  };
-  if (!drafts[title]) return "";
-  return drafts[title].map(src => `<img src="${src}" alt="Draft of ${title}" />`).join("");
-}
-
-
-  });
 </script>
-
 
 <div id="imageModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2 id="modalTitle" class="modal-title"></h2>
-    <img class="modal-img" id="modalImage" />
+    <div class="modal-nav">
+      <button id="prevDraft" class="scroll-btn left">&#8592;</button>
+      <img class="modal-img" id="modalImage" />
+      <button id="nextDraft" class="scroll-btn right">&#8594;</button>
+    </div>
     <div class="modal-caption" id="modalCaption"></div>
     <div class="modal-drafts" id="modalDrafts"></div>
+    <button id="resetZoom" class="reset-zoom">Reset Zoom</button>
   </div>
 </div>
 
-<button id="resetZoom" class="reset-zoom">Reset Zoom</button>
-
-
-
-
+<script src="portfolio.js"></script>
 
 </body>
 </html>
